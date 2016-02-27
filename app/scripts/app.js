@@ -15,14 +15,19 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'countUpModule'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'scripts/main/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
+      })
+      .when('/editDetails', {
+        templateUrl: 'scripts/edit-details/edit-details.html',
+        controller: 'MainCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',

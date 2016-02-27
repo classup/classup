@@ -1,0 +1,113 @@
+
+<div ng-include="'scripts/main-header/main-header.html'"></div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-sm-12">
+			<div class="blog-wrapper" style="padding:30px 0 10px 0">
+				<div class="blog-content details">
+					
+						<div class="post-wrapper">
+							<div class="author">
+								<!-- athor image--><img src="img/others/blog-user-7.jpg" alt="" class="user-image img-responsive">
+								<!-- info-->
+							  <div class="info-block">
+							  	<div class="col-md-12 col-sm-12" ng-repeat="user in userDetails.aboutUs">
+							  		<div class="col-md-8 col-md-offset-2 col-sm-12">
+								  		<div style="font-family:Lobster;font-size:16px" class="col-md-3 col-md-offset-2 col-sm-12" ng-bind="user.field"></div>
+								  		<div class="col-md-5 col-sm-12" ng-bind="user.value"></div>
+								  	</div>
+							  	</div>
+							    <!-- <h3 ng-bind="user.name"></h3>
+							    <a href="#">
+							      <h5 ng-bind="user.location"></h5>
+							  	</a> -->
+							  </div>
+							  <!-- Social-->
+							  <ul class="social">
+							    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+							  </ul>
+							</div>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-12">	
+			<!-- Rating and counter -->
+			<div class="features-wrapper index-1"  style="padding:30px 0 10px 0">
+		        <div class="container">
+		          <!-- Features Row-->
+		          	<div class="features row">
+			            <!-- Feature 1-->
+			            <div class="feature-outer col-sm-6 col-lg-3 col-md-6 col-xs-12">
+			              	<div class="feature color-1">
+				                <div class="icon">
+				                	<div class="counter-inner">
+					                  	<h2 count-up end-val="userRating.count"></h2>
+					                  	<h3>Rating</h3>
+					                </div>
+								</div>
+				                <h2 ng-bind="userRating.rated"></h2>
+				                <p ng-bind="userRating.review"></p>
+			              	</div>
+			            </div>
+		      		</div>
+		        </div>
+		  	</div>		
+      	</div>
+	</div>
+	<div class="row">
+		<!-- Options -->
+		<div class="col-md-12 col-sm-12 portfolio-wrapper index-1" style="padding:0px;background:#fff">
+			<!-- <div class="col-md-2 col-sm-2" ng-repeat="options in utilities">
+				<a href="#{{options.url}}" ng-bind="options.name"></a>
+			</div> -->
+			<ul class="portfolio-filter" style="padding:0px 0 10px 0">
+	          <li data-filter="*" ng-class="{'active':$index === index}" ng-repeat="options in utilities"><i class="fa fa-circle"></i><span ng-click="" ng-bind="options.name"></span></li>
+	        </ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12 col-sm-12 news-wrapper index-1" style="padding:0px">
+			<div class="news-boxes row">
+            <!-- News Box 1-->
+            <div class="col-md-10 col-sm-11 col-md-offset-1" ng-repeat="items in classUpTopics">
+              <div class="news-box-outer">
+                <div class="news-box-inner">
+                  <div class="image col-md-6"><img src="img/news/news-1.jpg" alt="" class="img-responsive">
+                    <div class="mask index-1"><a href="#"></a></div>
+                  </div>
+                  <div class="info-block col-md-6">
+                  	<div class="row">
+                     	<h3 ng-bind="items.name" class="col-md-6" style="padding-bottom:10px"></h3>
+	                  	<i class="fa fa-pencil col-md-offset-5 col-md-1" style="color:orange;cursor:pointer" ng-click="editForm(items.name)"></i>
+                  	</div>
+                    <!-- <h5><i class="fa fa-calendar"></i>12, April 2015</h5> -->
+                   	 <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+                   	 <a href="#" class="button button-special">Read More</a> -->
+                   	 <div ng-repeat="keys in userDetailsKeys">
+                   	 	<div class="row" ng-repeat="info in userDetails[keys]">
+	                   	 <div class="col-md-3" ng-bind="info.field"></div>
+	                   	 <div class="col-md-5" ng-bind="info.value"></div>
+	                   	</div>
+	                 </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1 col-sm-1">
+	          	
+	          </div>
+            </div>
+           	
+          </div>
+
+      </div>
+  	</div>
+</div>
+
