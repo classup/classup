@@ -1,0 +1,48 @@
+<div class="row">
+		<!-- Options -->
+		<div class="col-md-12 col-sm-12 portfolio-wrapper index-1" style="padding:0px;background:#fff">
+			<!-- <div class="col-md-2 col-sm-2" ng-repeat="options in utilities">
+				<a href="#{{options.url}}" ng-bind="options.name"></a>
+			</div> -->
+			<ul class="portfolio-filter" style="padding:0px 0 10px 0">
+	          <li data-filter="*" ng-class="{'active':$index === index}" ng-repeat="options in utilities"><i class="fa fa-circle"></i><span ng-click="" ng-bind="options.name"></span></li>
+	        </ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12 col-sm-12 news-wrapper index-1" style="padding:0px">
+			<div class="news-boxes row">
+            <!-- News Box 1-->
+            <div class="col-md-10 col-sm-11 col-md-offset-1" ng-repeat="items in classUpTopics">
+              <div class="news-box-outer">
+                <div class="news-box-inner">
+                  <div class="image col-md-6"><img src="img/news/news-1.jpg" alt="" class="img-responsive">
+                    <div class="mask index-1"><a href="#"></a></div>
+                  </div>
+                  <div class="info-block col-md-6">
+                  	<div class="row">
+                     	<h3 ng-bind="items.name" class="col-md-6" style="padding-bottom:10px"></h3>
+	                  	<a ui-sref="editProfile.{{items.field}}({route: items.field})"><i class="fa fa-pencil col-md-offset-5 col-md-1" style="color:orange;cursor:pointer"></i></a>
+                  	</div>
+                    <!-- <h5><i class="fa fa-calendar"></i>12, April 2015</h5> -->
+                   	 <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+                   	 <a href="#" class="button button-special">Read More</a> -->
+                   	 <div ng-repeat="keys in userDetailsKeys">
+                   	 	<div class="row" ng-repeat="info in userDetails[keys]">
+	                   	 <div class="col-md-3" ng-bind="info.field"></div>
+	                   	 <div class="col-md-5" ng-bind="info.value"></div>
+	                   	</div>
+	                 </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1 col-sm-1">
+	          	
+	          </div>
+            </div>
+           	
+          </div>
+
+      </div>
+  	</div>

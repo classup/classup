@@ -8,7 +8,7 @@
  * Controller of the classupApp
  */
 angular.module('classupApp')
-  .controller('MainCtrl', function ($scope,$location,$state) {
+  .controller('ProfileCtrl', function ($scope,$location) {
     $scope.userRating= {
     	count: 7,
     	rated: 'Professional Teaching',
@@ -56,15 +56,18 @@ angular.module('classupApp')
     }];
 
     $scope.classUpTopics = [{
-    	name:'About Us'
+    	name:'About Us',
+        field:'aboutUs'
     },
     {
-    	name: 'Our Teachers'
+    	name: 'Our Teachers',
+        field: 'ourTeachers'
     },
     {
-    	name:'Subjects'
+    	name:'Subjects',
+        field:'subjects'
     }]
-    //$state.go('main.profile');
+
     $scope.editForm = function(name) {
         $location.path('/editDetails');
     }

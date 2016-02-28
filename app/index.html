@@ -29,7 +29,6 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <!-- <link rel="stylesheet" href="styles/main.css"> -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- endbuild -->
   </head>
@@ -42,7 +41,7 @@
     <!-- Add your site or application content here -->
    
        <!--  <div class="container"> -->
-          <div ng-view=""></div>
+          <div ui-view=""></div>
        <!--  </div> -->
 
         <div class="footer">
@@ -77,19 +76,22 @@
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-touch/angular-touch.js"></script>
-        <script src="bower_components/underscore/underscore.js"></script> 
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/main/controllers/main.js"></script>
-        <script src="scripts/edit-details/controllers/edit_details.js"></script>
+        <script src="scripts/profile/controllers/profile.js"></script>
+        <script src="scripts/about-us/controllers/about_us.js"></script>
+        <script src="scripts/edit-profile/controllers/edit_profile.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
         <script type="text/javascript" src="libs/waypoints/jquery.waypoints.min.js"></script>
         <script type="text/javascript" src="libs/count-up/countUp.js"></script>
         <script type="text/javascript" src="libs/count-up/angular-countUp.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="scripts/google.map.js"></script>
         <script src="scripts/js.js"></script>
         <script src="scripts/style.selector.js"></script>
