@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" ng-controller="MainCtrl">
 <!--  <div id="preloaderKDZ"></div> -->
     <div id="site" class="site">
         <div class="header">
@@ -9,7 +9,7 @@
                         <input type="search" name="search-field" placeholder="Type and hit enter..." class="text-search-field" /><i id="close-btn" class="fa fa-close"></i>
                     </div>
                 </form>
-                <div class="navigation container">
+                <div class="navigation container-fluid">
                     <!-- Nav Bar Toggle/collapse and Logo-->
                     <div class="navbar-header">
                         <div class="navbar-brand" style="vertical-align:middle">
@@ -20,22 +20,27 @@
                     </div>
                 <!-- Collpsing Items and Navigation-->
                     <div class="myNavbar collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right" style="height:100px">
                             <!-- Item 1-->
-                            <li class="menu-item">
+                            <li class="menu-item" style="padding-top:25px">
                                 <form class="contact-form">
                                     <div class="field">
-                                    <input type="text" placeholder="Search" />
+                                    <input type="text" placeholder="Search" class="form-control" ng-model="searchParameter"/>
+                                    <!-- <div class="glyphicon glyphicon-search form-control-feedback" style="top:10px" ng-click="search()"></div> -->
+
                                     </div>
                                 </form>
                             </li>
-                            <li class="menu-item"><a data-toggle="dropdown" href="#" style="color: #ffffff;
+                            <li class="menu-item" style="padding-top:25px">
+                                 <div class="search-nav big" ng-click="search()"><i class="fa fa-search"></i></div>
+                             </li>
+                            <li class="menu-item" style="padding-top:25px"><a data-toggle="dropdown" href="#" style="color: #ffffff;
     background: #ffa800;
     border-radius: 22px;">Create Tutorial</i></a>
                             </li>
                             <!-- Item 2-->
-                            <li class="menu-item"><a data-toggle="dropdown" href="#" class="dropdown-toggle">Username<i class="fa fa-angle-down"></i></a>
-                                <ul class="sub-menu">
+                            <li class="menu-item" style="padding-top:25px"><a data-toggle="dropdown" href="#" class="dropdown-toggle">Username<i class="fa fa-angle-down"></i></a>
+                                <ul class="sub-menu" style="top:100px">
                                     <li><a href="course-grid.html">Logout</a></li>
                                 </ul>
                             </li>

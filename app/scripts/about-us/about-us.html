@@ -16,7 +16,8 @@
                   <textarea name="Message" cols="10" rows="10" placeholder="Message"></textarea>
                 </div> -->
                 <div class="field" ng-repeat='edit in userDetails.aboutUs'>
-                	<label>{{edit.field}}</label><input type="{{edit['type']}}" name="name" ng-model="edit.value" placeholder="{{edit['field']}}">
+                	<label>{{edit.field}}</label><input type="{{edit['type']}}" name="name" ng-model="edit.value" placeholder="{{edit['field']}}" ng-show="edit.value || edit.value === null">
+                  <div ng-click="edit.value = null" ng-hide="edit.value || edit.value === null">+ Add username</div>
                 </div>
                 <input type="submit" class="col-dm"value="Save" class="submit">
               </form>

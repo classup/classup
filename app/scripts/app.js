@@ -70,6 +70,12 @@ angular
       url: "/aboutUs",
       templateUrl: "scripts/about-us/about-us.html",
       controller: 'AboutUsCtrl'
+    })
+    .state('searchDetails', { 
+      url: "/search",
+      params: {searchParameter:null},
+      templateUrl: "scripts/search-details/search-details.html",
+      controller: 'SearchDetailsCtrl'
     });
     // .state('state2.list', {
     //   url: "/list",

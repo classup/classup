@@ -72,4 +72,11 @@ angular.module('classupApp')
         
         $location.path('/');
     }
+
+    $scope.search = function() {
+        if($scope.searchParameter !== null || $scope.searchParameter !== undefined) {
+            //fire query and route to another page
+            $state.go('searchDetails',{searchParameter:$scope.searchParameter});
+        }        
+    }
   });
