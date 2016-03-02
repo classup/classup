@@ -3,63 +3,41 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-8 col-sm-12">
-			<div class="blog-wrapper" style="padding:30px 0 10px 0">
-				<div class="blog-content details">
-					
-						<div class="post-wrapper">
-							<div class="author">
-								<!-- athor image--><img src="img/others/blog-user-7.jpg" alt="" class="user-image img-responsive">
-								<!-- info-->
-							  <div class="info-block">
-							  	<div class="col-md-12 col-sm-12" ng-repeat="user in userDetails.aboutUs">
-							  		<div class="col-md-8 col-md-offset-2 col-sm-12">
-								  		<div style="font-family:Lobster;font-size:16px" class="col-md-3 col-md-offset-2 col-sm-12" ng-bind="user.field"></div>
-								  		<div class="col-md-5 col-sm-12" ng-bind="user.value"></div>
-								  	</div>
-							  	</div>
-							    <!-- <h3 ng-bind="user.name"></h3>
-							    <a href="#">
-							      <h5 ng-bind="user.location"></h5>
-							  	</a> -->
-							  </div>
-							  <!-- Social-->
-							  <ul class="social">
-							    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-							    <li><a href="#"><i class="fa fa-rss"></i></a></li>
-							  </ul>
-							</div>
-						</div>
-					
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 col-sm-12">	
-			<!-- Rating and counter -->
-			<div class="features-wrapper index-1"  style="padding:30px 0 10px 0">
-		      
-		          <!-- Features Row-->
-		          	<div class="features row">
-			            <!-- Feature 1-->
-			            <div class="feature-outer col-sm-12 col-lg-12 col-md-12 col-xs-12">
-			              	<div class="feature color-1">
-				                <div class="icon">
-				                	<div class="counter-inner">
-					                  	<h2 count-up end-val="userRating.count"></h2>
-					                  	<h3>Rating</h3>
-					                </div>
-								</div>
-				                <h2 ng-bind="userRating.rated"></h2>
-				                <p ng-bind="userRating.review"></p>
-			              	</div>
-			            </div>
-		      		</div>
-		        
-		  	</div>		
-      	</div>
+		<div class="features-wrapper index-2">
+        <div class="container">
+          <!-- Features Row-->
+          <div class="row">
+            <!-- Features Left-->
+            <div class="features left col-md-3 col-sm-6 col-xs-6">
+              <!-- Feature 1-->
+              <div class="feature top">
+                <div class="icon clearfix color-1"><img src="img/icons/atom-2-color.png" alt="" class="default"><img src="img/icons/atom-2.png" alt="" class="hover"></div>
+                <h2>Teaching</h2>
+              </div>
+              <!-- Feature 2-->
+              <div class="feature bottom">
+                <div class="icon clearfix color-2"><img src="img/icons/light-bulb-2-color.png" alt="" class="default"><img src="img/icons/light-bulb-2.png" alt="" class="hover"></div>
+                <h2>Funny &amp; Happy</h2>
+              </div>
+            </div>
+            <!-- Thumbnail-->
+            <div class="thumb col-md-6"><img src="img/others/kids.png" alt="" class="img-responsive"></div>
+            <!-- Features Right-->
+            <div class="features right col-md-3 col-sm-6 col-xs-6">
+              <!-- Feature 1-->
+              <div class="feature top">
+                <div class="icon clearfix color-3"><img src="img/icons/compass-2-color.png" alt="" class="default"><img src="img/icons/compass-2.png" alt="" class="hover"></div>
+                <h2>Fully equipped</h2>
+              </div>
+              <!-- Feature 2-->
+              <div class="feature bottom">
+                <div class="icon clearfix color-4"><img src="img/icons/graduation-2-color.png" alt="" class="default"><img src="img/icons/graduation-2.png" alt="" class="hover"></div>
+                <h2>Teaching</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 	</div>
 	<div ui-view></div>
 </div>

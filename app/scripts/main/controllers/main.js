@@ -35,25 +35,7 @@ angular.module('classupApp')
         teachers:[]
     };
     $scope.userDetailsKeys = _.keys($scope.userDetails)
-    $scope.utilities = [{
-    	name: 'MAP',
-    	url: '/map'
-    },{
-    	name: 'Share',
-    	url: '/share'
-    },{
-    	name: 'Review',
-    	url: '/review'
-    },{
-    	name: 'Your Vote',
-    	url: '/vote'
-    },{
-    	name: 'Ask Your Friend',
-    	url: '/ask_your_friend'
-    },{
-    	name: 'Check mark',
-    	url: '/check_mark'
-    }];
+   
 
     $scope.classUpTopics = [{
     	name:'About Us'

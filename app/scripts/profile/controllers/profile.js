@@ -35,25 +35,7 @@ angular.module('classupApp')
         teachers:[]
     };
     $scope.userDetailsKeys = _.keys($scope.userDetails)
-    $scope.utilities = [{
-    	name: 'MAP',
-    	url: '/map'
-    },{
-    	name: 'Share',
-    	url: '/share'
-    },{
-    	name: 'Review',
-    	url: '/review'
-    },{
-    	name: 'Your Vote',
-    	url: '/vote'
-    },{
-    	name: 'Ask Your Friend',
-    	url: '/ask_your_friend'
-    },{
-    	name: 'Check mark',
-    	url: '/check_mark'
-    }];
+   
 
     $scope.classUpTopics = [{
     	name:'About Us',
@@ -67,7 +49,40 @@ angular.module('classupApp')
     	name:'Subjects',
         field:'subjects'
     }]
+    $scope.teachersGallery = [{
+        name:'A',
+        image_src: null
+    },{
+        name:'B',
+        image_src: null
+    },{
+        name:'C',
+        image_src: null
+    },{
+        name:'D',
+        image_src: null
+    },{
+        name:'D',
+        image_src: null
+    },{
+        name:'D',
+        image_src: null
+    },{
+        name:'D',
+        image_src: null
+    }];
 
+    $scope.subjectCss = ['mon','tue','wed','thu','fri','sat'];
+    $scope.subjectList = {
+        'Engineering': [{
+            year:'First Year',
+            subjects: ['BI','ODC','sda','HJS']
+        }],
+        'Science':[],
+        'Commerce':[],
+        'Arts':[]
+    }
+    $scope.subjectListKeys = _.keys($scope.subjectList)
     $scope.editForm = function(name) {
         $location.path('/editDetails');
     }
