@@ -47,12 +47,49 @@ angular.module('classupApp')
     	name:'Subjects'
     }]
     //$state.go('main.profile');
-    $scope.editForm = function(name) {
-        $location.path('/editDetails');
+    $scope.showTutorial = false;
+    $scope.addCustomStream = false;
+    $scope.show = function(parameter){
+        console.log('show',parameter);
+       $scope.showTutorial = true;
+        console.log($scope.showTutorial)
     }
-    $scope.save = function(){
-        
-        $location.path('/');
+    //need to fetch default steams and subjects, then add our own from html
+    $scope.myTutorial = {
+        name:null,
+        contact:null,
+        streams:[{
+            name:'Eng',
+            ticked:false
+        },{
+            name:'Commerce',
+            ticked:false
+        },{
+            name:'Arts',
+            ticked:false
+        }],
+        streamsSelected:[],
+        subject:{
+            Eng: {
+                year:'First',
+                subjects:['BEE','Mech','pHysics','AM']
+            }
+        }
+    }
+    $scope.addCustomStreamName = function(){
+        if($scope.customStreamName !== undefined && $scope.customStreamName !== null) { //add a check for duplicate names
+             $scope.myTutorial.streams.push({
+                name: _.clone($scope.customStreamName),
+                ticked:true
+            })
+             $scope.addCustomStream = false;
+             $scope.customStreamName = null;
+        }
+       
+    }
+    $scope.createTutorial = function(){
+        $state.go('main.profile');
+        $scope.showTutorial = false;
     }
 
     $scope.search = function() {

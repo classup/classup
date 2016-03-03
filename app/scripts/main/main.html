@@ -11,8 +11,8 @@
             <div class="features left col-md-3 col-sm-6 col-xs-6">
               <!-- Feature 1-->
               <div class="feature top">
-                <div class="icon clearfix color-1"><img src="img/icons/atom-2-color.png" alt="" class="default"><img src="img/icons/atom-2.png" alt="" class="hover"></div>
-                <h2>Teaching</h2>
+                <div ng-click="show()" class="icon clearfix color-1"><img src="img/icons/atom-2-color.png" alt="" class="default"><img src="img/icons/atom-2.png" alt="" class="hover"></div>
+                <h2>Create Tutorial</h2>
               </div>
               <!-- Feature 2-->
               <div class="feature bottom">
@@ -38,6 +38,78 @@
           </div>
         </div>
       </div>
+	</div>
+
+	<div class="row" ng-show="showTutorial">
+		<div class="overlay"  style="    position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.6);z-index: 10000;">
+
+
+				<div class="container" style="padding-top:5%;background-color:#fff;padding-bottom:5%;margin-top:5%;border-radius:25px">
+				    <div class="row">
+				    	<div class="col-md-12">
+				    		<div class="section-name index-2">
+                            	<div class="sep"></div>
+                            	<h1>Create Tutorial</h1>
+                          	</div>
+			    		</div>
+		    		</div>	
+				    <div class="row" style="padding-top:2%">
+				      <div class="col-md-12">
+				        <div class="col-md-6 col-md-offset-3">
+				          <!-- <div class="col-md-12">
+				            <div class="col-md-3 col-md-offset-3">Username:</div>
+				            <div class="col-md-6"><input type="text" placeholder="Username"/></div>
+				          </div> -->
+				          <form class="contact-form" ng-submit="createTutorial()">
+				                <div class="field">
+				                  <input type="text" ng-model="myTutorial.name" name="Username" placeholder="Tutorial Name" required>
+				                </div>
+				                <div class="field">
+				                  <input type="tel" ng-model="myTutorial.contact" name="Password" placeholder="Contact number" required>
+				                </div>
+				                <div >
+				                	<label>Streams:</label><div isteven-multi-select
+							            input-model="myTutorial.streams"
+							            output-model="myTutorial.streamsSelected",
+							            disable-property="mandatory",
+							            button-label="name"
+							            item-label="name"
+							            max-labels="5"
+							            tick-property="ticked"
+							            button-label = ""
+							            class="col-md-12">
+							        </div>
+				                	<div class="col-md-12" ng-click="addCustomStream = true" ng-hide="addCustomStream">+ Add Your stream</div>
+				                	<div ng-show="addCustomStream">
+				                		<input type="text" ng-model="customStreamName" placeholder="Enter your stream"/>
+				                		<div class="btn btn-primary" ng-click="addCustomStreamName()">Add</div>
+				                	</div>
+				                </div>
+				                <div class="field">
+
+				                </div>
+				                <!-- <div class="col-md-12">
+				                  <div class="col-md-6">
+				                    <input type="button" value="Sign in" ng-click="validateUser()" class="btn btn-primary col-md-6 col-md-offset-4" style="max-width:50%"/>
+				                    <div class="col-md-10 col-md-offset-2">
+				                      <a href="/forgot" style="text-decoration:underline">Forgot your password?</a>
+				                    </div>
+				                  </div>
+				                  <div class="col-md-6">
+				                    <input type="button" value="Sign up" class="btn btn-success col-md-11 col-md-offset-1" style="max-width:50%"/>
+				                  </div>
+				                </div> -->
+				                <input type="submit" value="Create Tutorial" class="submit">
+				              </form>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+
+
+
+
+		</div>
 	</div>
 	<div ui-view></div>
 </div>

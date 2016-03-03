@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'countUpModule',
-    'ui.router'
+    'ui.router',
+    'isteven-multi-select'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("main/profile");
@@ -44,8 +45,13 @@ angular
 
 
     $stateProvider
+    .state('login', {
+      url: "/login",
+      templateUrl: "scripts/login/login.html",
+      controller: 'LoginCtrl'
+    })
     .state('main', {
-      url: "/main",
+      url: "/:id",
       templateUrl: "scripts/main/main.html",
       controller: 'MainCtrl'
     })

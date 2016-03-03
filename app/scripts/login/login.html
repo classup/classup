@@ -1,0 +1,56 @@
+<div class="jumbotron jumbotron-1" style="padding-bottom:0px">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-md-offset-10" style="margin-top:-5%">
+          <input type="button" value="Sign Up" class="btn btn-success"/>
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    
+
+    <h1>Welcome to</h1>
+    <div class="ribbon">
+      <ul>
+        <li><i class="fa fa-star-o"></i></li>
+        <li>
+          <h2>ClassUp</h2>
+        </li>
+        <li><i class="fa fa-star-o"></i></li>
+      </ul><img src="img/others/ribbon.png" alt="">
+    </div>
+    <p>We build up the best education environment for children and direct them to express themselves at most</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6 col-md-offset-3">
+          <!-- <div class="col-md-12">
+            <div class="col-md-3 col-md-offset-3">Username:</div>
+            <div class="col-md-6"><input type="text" placeholder="Username"/></div>
+          </div> -->
+          <form class="contact-form">
+                <div class="field">
+                  <input type="text" ng-model="user.username" name="Username" placeholder="Username">
+                </div>
+                <div class="field">
+                  <input type="password" ng-model="user.password" name="Password" placeholder="Password">
+                </div>
+                <!-- <div class="col-md-12">
+                  <div class="col-md-6">
+                    <input type="button" value="Sign in" ng-click="validateUser()" class="btn btn-primary col-md-6 col-md-offset-4" style="max-width:50%"/>
+                    <div class="col-md-10 col-md-offset-2">
+                      <a href="/forgot" style="text-decoration:underline">Forgot your password?</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="button" value="Sign up" class="btn btn-success col-md-11 col-md-offset-1" style="max-width:50%"/>
+                  </div>
+                </div> -->
+                <input type="submit" value="Login" class="submit" ng-click="validateUser()">
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
