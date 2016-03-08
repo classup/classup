@@ -18,10 +18,10 @@ angular.module('classupApp')
          //make call to server and validate
         if($scope.user.username === $scope.user.password) {
             //if resp true , then send id 
-            if($scope.user.hasClass)    //need to check for classes
+            if(!$scope.user.hasClass)    //need to check for classes
                 $state.go('main',{id:190});
             else    //else route to empty page
-                $state.go('main.profile',{id:190})
+                $state.go('main.profile',{id:190})  
         }    
         else
             alert('Invalid username or password');

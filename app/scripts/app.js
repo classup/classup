@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'countUpModule',
     'ui.router',
-    'isteven-multi-select'
+    'isteven-multi-select',
+    'flow'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("main/profile");
@@ -76,6 +77,11 @@ angular
       url: "/aboutUs",
       templateUrl: "scripts/about-us/about-us.html",
       controller: 'AboutUsCtrl'
+    })
+    .state('editProfile.teachers', { 
+      url: "/teachers",
+      templateUrl: "scripts/teachers/teachers.html",
+      controller: 'TeachersCtrl'
     })
     .state('searchDetails', { 
       url: "/search",
