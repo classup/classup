@@ -354,7 +354,6 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          dot: true,
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
@@ -363,18 +362,21 @@ module.exports = function (grunt) {
             '*.html',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
+            
           ]
         }, {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
-          src: ['generated/*']
+          src: ['generated/* ']
         }, {
           expand: true,
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
-        }]
+        }
+
+        ]
       },
       styles: {
         expand: true,
@@ -426,7 +428,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('heroku',
         ['compass:dist', 'autoprefixer', 'imagemin']);
-    
+
       grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
         grunt.task.run(['serve:' + target]);
